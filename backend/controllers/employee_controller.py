@@ -50,7 +50,6 @@ async def fetch_employee_by_id(db, employee_id: str):
 async def modify_employee(db, employee_id: str, update_data: dict):
    
     # Update an existing employee's information.
-    # Verify the employee exists
     employee = await db.employees.find_one({"employee_id": employee_id})
     if not employee:
         raise HTTPException(status_code=404, detail="Employee not found")
@@ -76,7 +75,6 @@ async def modify_employee(db, employee_id: str, update_data: dict):
 async def remove_employee(db, employee_id: str):
   
     # Delete  employee from the database by their employee ID.
-    # Verify the employee exists
     employee = await db.employees.find_one({"employee_id": employee_id})
     if not employee:
         raise HTTPException(status_code=404, detail="Employee not found")

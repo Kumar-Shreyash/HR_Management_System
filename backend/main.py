@@ -6,10 +6,10 @@ from routes import employee_routes, attendance_routes, dashboard_routes
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # startup code
+    # startup
     await connect_to_db()
     yield
-    # shutdown code
+    # shutdown
     await close_db_connection()
 
 app = FastAPI(lifespan=lifespan)
@@ -23,10 +23,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
-app.include_router(employee_routes.router, prefix="/api/v1", tags=["Employees"])
-app.include_router(attendance_routes.router, prefix="/api/v1", tags=["Attendance"])
-app.include_router(dashboard_routes.router, prefix="/api/v1", tags=["Dashboard"])
+# routers
+app.include_router(employee_routes.router, prefix="/api", tags=["Employees"])
+app.include_router(attendance_routes.router, prefix="/api", tags=["Attendance"])
+app.include_router(dashboard_routes.router, prefix="/api", tags=["Dashboard"])
 
 @app.get("/")
 async def home():

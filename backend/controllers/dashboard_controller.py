@@ -11,13 +11,13 @@ async def fetch_dashboard_summary(db):
     departments = list(set(emp["department"] for emp in all_employees))
     total_departments = len(departments)
     
-    # Count employees in each department
+    # Count employees of each department
     department_stats = {}
     for dept in departments:
         count = sum(1 for emp in all_employees if emp["department"] == dept)
         department_stats[dept] = count
     
-    # Calculate attendance for today
+    # Calculate attendance 
     today_start = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
     today_end = today_start + timedelta(days=1)
     
