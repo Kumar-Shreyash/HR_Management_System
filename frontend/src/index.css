@@ -1,0 +1,134 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #334155;
+  background-color: #e2e8f0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Professional Theme (Royal Blue + Slate) */
+:root {
+  /* Clean, Solid Background */
+  --bg-primary: #f8fafc;
+  /* Slate-50: Crisp, clean corporate background */
+
+  /* Solid Cards (High Performance & Legibility) */
+  --bg-card: #ffffff;
+  /* Pure white */
+  --bg-secondary: #ffffff;
+
+  /* Accent - Royal Blue (Trustworthy) */
+  --accent: #2563eb;
+  /* Blue-600 */
+  --accent-hover: #1d4ed8;
+  /* Blue-700 */
+
+  /* Text */
+  --text-primary: #0f172a;
+  /* Slate-900: Sharpest contrast */
+  --text-secondary: #64748b;
+  /* Slate-500 */
+  --border: #e2e8f0;
+  /* Slate-200: Standard crisp border */
+
+  /* Status */
+  --success: #16a34a;
+  /* Green-600 */
+  --success-bg: #dcfce7;
+  --warning: #ca8a04;
+  /* Yellow-600 */
+  --danger: #dc2626;
+  /* Red-600 */
+  --danger-bg: #fee2e2;
+
+  /* Nav */
+  --nav-hover-bg: #f1f5f9;
+  /* Slate-100 */
+  --nav-active-bg: #eff6ff;
+  /* Blue-50 */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+input,
+select {
+  font-family: inherit;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}

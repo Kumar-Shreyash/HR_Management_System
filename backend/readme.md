@@ -84,12 +84,14 @@ Ensure the following are installed on your system:
    ```bash
    python main.py
    ```
+   The server will be available at: [http://http://0.0.0.0:8081]
+
    Or start directly with Uvicorn:
    ```bash
    uvicorn main:app --reload
    ```
 
-   The server will be available at: [http://localhost:8000](http://localhost:8000)
+   The server will be available at: [http://127.0.0.1:8000]
 
 ## 📖 API Documentation
 
