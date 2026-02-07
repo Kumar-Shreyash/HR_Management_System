@@ -1,6 +1,8 @@
 from configs.dbConfig import connect_to_db, close_db_connection, get_db 
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
+from fastapi.middleware.cors import CORSMiddleware
+from routes import employee_routes, attendance_routes, dashboard_routes
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -12,8 +14,24 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+# CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include routers
+app.include_router(employee_routes.router, prefix="/api/v1", tags=["Employees"])
+app.include_router(attendance_routes.router, prefix="/api/v1", tags=["Attendance"])
+app.include_router(dashboard_routes.router, prefix="/api/v1", tags=["Dashboard"])
+
 @app.get("/")
 async def home():
-    db = get_db()
-    collection_names = await db.list_collection_names()
-    return {"collections": collection_names}
+    return {"message": "Server running on port 8081"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8081)
