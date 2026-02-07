@@ -30,7 +30,7 @@ app.include_router(dashboard_routes.router, prefix="/api/v1", tags=["Dashboard"]
 
 @app.get("/")
 async def home():
-    return {"message": "Server running on port 8081"}
+    return {"message": "HR Management System is Running..."}
 
 if __name__ == "__main__":
     import uvicorn
