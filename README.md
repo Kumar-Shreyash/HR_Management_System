@@ -93,6 +93,7 @@ Follow these steps to set up the project locally.
     ```
     The API will be available at `http://127.0.0.1:8000`. API Docs are at `http://localhost:8000/docs`.
 
+
 ### Frontend Setup
 
 1.  Navigate to the frontend directory:
@@ -110,6 +111,18 @@ Follow these steps to set up the project locally.
     npm run dev
     ```
     The application will run at `http://localhost:5173`.
+
+---
+
+## Deployed Environment (Render)
+
+The application is deployed on Render and available at:
+
+# Base URL:
+👉 https://hr-management-system-1-jfv9.onrender.com
+
+# API Docs (Swagger):
+👉 https://hr-management-system-1-jfv9.onrender.com/docs
 
 ---
 
