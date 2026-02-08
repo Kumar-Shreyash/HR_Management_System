@@ -114,14 +114,14 @@ Follow these steps to set up the project locally.
 
 ---
 
-## Deployed Environment (Render)
+# Deployed Environment (Render)
 
 The application is deployed on Render and available at:
 
-# Base URL:
-👉 https://hr-management-system-1-jfv9.onrender.com
+## Base URL:
+👉 [https://hr-management-system-1-jfv9.onrender.com](https://hr-management-system-1-jfv9.onrender.com)
 
-# API Docs (Swagger):
+## API Docs (Swagger):
 👉 https://hr-management-system-1-jfv9.onrender.com/docs
 
 ---
